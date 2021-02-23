@@ -1,6 +1,7 @@
 package main
 
 import (
+	"fmt"
 	"os"
 	"text/template"
 )
@@ -20,7 +21,7 @@ func main() {
 	if err != nil {
 		panic(err)
 	}
-	
+	fmt.Printf("%v\n", user1.Name)
 	tmpl.Execute(os.Stdout, user1)
 	tmpl.Execute(os.Stdout, user2)
 
